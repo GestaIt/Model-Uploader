@@ -11,3 +11,5 @@ pip install -r requirements.txt
 ```pycon
 py __main__.py
 ```
+
+**THIS IS MEANT TO BE AN OPEN SOURCED MODEL UPLOADER FOR PEOPLE WHO NEEDED THE API**
