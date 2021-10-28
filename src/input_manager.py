@@ -28,7 +28,7 @@ def start_input_loop():
 
 def _help(_: Uploader):
     print(
-        "Commands:\n\nhelp\n\tDisplays all of the accessible commands.\n\noverwriteasset\n\tDisplays a prompt to overwrite an assets source.\n\npublishasset\n\tDisplays a prompt to upload a new asset.\n")
+        "Commands:\n\nhelp\n\tDisplays all of the accessible commands.\n\noverwriteasset\n\tDisplays a prompt to overwrite an assets source.\n\nuploadasset\n\tDisplays a prompt to upload a new asset.\n")
 
 
 def _prompt_upload(uploader: Uploader):
@@ -37,7 +37,7 @@ def _prompt_upload(uploader: Uploader):
     user_asset_name: str = input("What is the name of this new asset? ")
     user_asset_description: str = input("What is the description? ")
     user_asset_copylocked: bool = str.lower(input("Should the asset be copylocked? (yes or no) ")) == "yes" or False
-    user_asset_group_id: str = input("If the asset should be uploaded under a group, please send the id here, else,"
+    user_asset_group_id: str = input("If the asset should be uploaded under a group, please send the id here, else, "
                                      "leave it blank. ")
 
     # Store the received information to be sent with the request.
@@ -59,7 +59,7 @@ def _prompt_upload(uploader: Uploader):
     # Making sure that the request was valid.
     assert update_response.status_code == 200, "The request was not valid. Please check your arguments."
 
-    print("Successfully updated!")
+    print("Successfully published!")
 
 
 def _prompt_overwrite_asset(uploader: Uploader):
