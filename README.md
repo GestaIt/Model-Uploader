@@ -9,7 +9,7 @@ pip install -r requirements.txt
 ```
 * Then run
 ```pycon
-py __main__.py
+py main.py
 ```
 
 **THIS IS MEANT TO BE AN OPEN SOURCED MODEL UPLOADER FOR PEOPLE WHO NEEDED THE API**
